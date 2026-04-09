@@ -29,5 +29,5 @@ jobs:
         run: |
           kdt scan \
             -p ${{ github.event.repository.name }} \
-            -t osv \
+            -t osvscannersca \
             -b ${GITHUB_REF#refs/heads/}
