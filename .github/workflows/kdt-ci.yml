@@ -23,7 +23,7 @@ jobs:
         run: |
           kdt create project \
             -a github \
-            -r ${{ github.server_url }}/${{ github.repository }}
+            -r ${{ github.server_url }}/${{ github.repository }} || exit-code 0
             
       - name: Run a SAST scan
         run: |
