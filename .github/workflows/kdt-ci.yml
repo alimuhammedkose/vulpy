@@ -23,11 +23,13 @@ jobs:
           kdt scan \
             -p ${{ github.event.repository.name }} \
             -t bandit \
-            -b ${GITHUB_REF#refs/heads/}
+            -b ${GITHUB_REF#refs/heads/} \
+            --async
 
       - name: Run a SCA scan
         run: |
           kdt scan \
             -p ${{ github.event.repository.name }} \
             -t osvscannersca \
-            -b ${GITHUB_REF#refs/heads/}
+            -b ${GITHUB_REF#refs/heads/} \
+            --async
